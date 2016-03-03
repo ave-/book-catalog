@@ -1,0 +1,12 @@
+<div layout-fill>
+  <section class="jumbotron">
+    <h1>Error accessing api</h1>
+    <p>There was an error while accessing api. Technical details are shown below:</p>
+    <p>{{err.error | json}}</p>
+    <p>Your options:</p>
+    <ul>
+      <li ng-show="err.prevState.name != ''"><a ui-sref="{{err.prevState.name?err.prevState.name:'catalog'}}">Return back</a></li>
+      <li ><a ui-sref="catalog">Return to catalog</a></li>
+    </ul>
+  </section>
+</div>

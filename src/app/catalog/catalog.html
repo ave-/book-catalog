@@ -1,0 +1,8 @@
+<md-grid-list layout-fill flex md-row-height="270px" md-cols-xs="3" md-cols-sm="4" md-cols-md="6" md-cols-lg="9" md-cols="6">
+  <md-grid-tile data-ng-repeat="book in catalog.books" class="gridtile" ng-click="catalog.info(book.id)">
+    <img ng-src="{{catalog.getResourcePath(book.cover)}}" class="md-card-image" err-src="/assets/images/image-not-found.png">
+    <md-grid-tile-footer>
+      <translatable-value data-bc-model="book.title"></translatable-value>
+    </md-grid-tile-footer>
+  </md-grid-tile>
+</md-grid-list>

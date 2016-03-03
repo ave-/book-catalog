@@ -1,0 +1,22 @@
+<div class="bundle">
+  <div md-whiteframe class="bundleframe">
+    Version:
+    {{bundle.version}}
+  </div>
+  <div md-whiteframe class="bundleframe">
+    Owner:
+    {{bundle.owner}}
+  </div>
+  <div md-whiteframe class="bundleframe">
+    Catalog:
+    <a ng-href="{{vm.getCatalogPath(bundle.catalog)}}">Parent catalog info</a>
+  </div>
+  <div md-whiteframe class="bundleframe">
+    Resource:
+    <a ng-href="{{vm.getResourcePath(bundle.resourceId)}}">Download</a>
+  </div>
+  <div md-whiteframe class="bundleframe">
+    Status:
+    {{bundle.status}}
+  </div>
+</div>

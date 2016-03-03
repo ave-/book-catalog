@@ -1,0 +1,80 @@
+<md-content layout="column">
+  <div md-whiteframe class="mainframe" class="mainframe">
+    Title:
+    <translatable-value data-bc-model="info.book.title"></translatable-value>
+  </div>
+  <div md-whiteframe class="mainframe">
+    Description:
+    <translatable-value data-bc-model="info.book.description"></translatable-value>
+  </div>
+  <div md-whiteframe class="mainframe">
+    Options:
+    <div layout="row">
+      <div ng-repeat="(name, value) in info.book.options" md-whiteframe class="option">
+        {{name}}:{{value}}
+      </div>
+    </div>
+  </div>
+  <div md-whiteframe class="mainframe">
+    Owner:
+    {{info.book.owner}}
+  </div>
+  <div md-whiteframe class="mainframe">
+    License params:
+    <div layout="row">
+      <div ng-repeat="(name, value) in info.book.licenseParams" md-whiteframe class="option">
+        {{name}}:{{value}}
+      </div>
+    </div>
+  </div>
+  <div md-whiteframe class="mainframe">
+    contentType:
+    {{info.book.contentType}}
+  </div>
+  <div md-whiteframe class="mainframe">
+    publishingStatus:
+    {{info.book.publishingStatus}}
+  </div>
+  <div md-whiteframe class="mainframe">
+    maxKeys:
+    {{info.book.maxKeys}}
+  </div>
+  <div md-whiteframe class="mainframe">
+    Preview videos:
+    <div layout="row">
+      <div ng-repeat="value in info.book.previewVideos" md-whiteframe class="option">
+        <a ng-href="{{info.getResourcePath(value)}}">Video url</a>
+      </div>
+    </div>
+  </div>
+  <div md-whiteframe class="mainframe">
+    Preview images:
+    <div layout="row">
+      <div ng-repeat="value in info.book.previewImages" md-whiteframe>
+        <img ng-src="{{info.getResourcePath(value)}}" err-src="/assets/images/image-not-found.png">
+      </div>
+    </div>
+  </div>
+  <div md-whiteframe class="mainframe">
+    Platform support:
+    <div layout="row">
+      <div ng-repeat="value in info.book.platformSupport" md-whiteframe class="option">
+        {{value}}
+      </div>
+    </div>
+  </div>
+  <div md-whiteframe class="mainframe">
+    Tags:
+    <div layout="row">
+      <div ng-repeat="value in info.book.tags" md-whiteframe class="option">
+        {{value}}
+      </div>
+    </div>
+  </div>
+  <div md-whiteframe class="mainframe">
+    Bundles:
+    <div layout="column">
+      <bundle ng-repeat="bundle in info.bundles" data-bc-model="bundle"></bundle>
+    </div>
+  </div>
+</md-content>
